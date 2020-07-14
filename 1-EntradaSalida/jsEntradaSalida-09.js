@@ -6,5 +6,31 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 
-	alert("ok");
+	var sueldo;
+	var aumento;
+	
+
+	var sueldo=txtIdSueldo.value;
+	var sueldo=parseInt(sueldo);
+
+	var aumento=sueldo*1.1;
+	
+	
+	txtIdResultado.value=aumento;
+
+	/*var sueldo;
+	var aumento;
+	var resultado;
+
+	var sueldo=txtIdSueldo.value;
+	var sueldo=parseInt(sueldo);
+
+	aumento=sueldo*10/100;
+	resultado=sueldo+aumento;
+
+	txtIdResultado.value=resultado;*/
+
+
+
+
 }
