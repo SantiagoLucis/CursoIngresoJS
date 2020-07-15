@@ -19,7 +19,7 @@ function sumar()
 
 	resultado=numero1+numero2;
 
-	alert(resultado)
+	alert(resultado);
 
 
 	
@@ -34,7 +34,7 @@ function restar()
 
 	resultado=numero1 - numero2;
 
-	alert(resultado)
+	alert(resultado);
 
 
 
@@ -48,7 +48,7 @@ function multiplicar()
 
 	resultado=numero1*numero2;
 
-	alert(resultado)
+	alert(resultado);
 	
 
 }
@@ -63,7 +63,6 @@ function dividir()
 
 	resultado=numero1/numero2;
 
-	alert(resultado)
+	alert(resultado);
 
 }
-
