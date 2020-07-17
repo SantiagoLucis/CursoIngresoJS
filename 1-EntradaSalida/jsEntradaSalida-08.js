@@ -20,9 +20,4 @@ function SacarResto()
 	alert("el resto es " + resultado);
 
 	// % para el resto / para division
-
-
-
-
-
 }

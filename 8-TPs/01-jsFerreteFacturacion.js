@@ -21,7 +21,6 @@ function Sumar ()
 	resultado=precio1+precio2+precio3;
 
 	alert ("la suma de los mismos es de " + resultado);
-	
 }
 function Promedio () 
 {
@@ -42,13 +41,10 @@ function Promedio ()
 	resultado=precio1+precio2+precio3;
 	promedio=resultado/3;
 
-
-
 	alert ("el promedio de los mismos es de " + promedio);
 }
 function PrecioFinal () 
 {
-
 	var precio1;
 	var precio2;
 	var precio3;
@@ -67,8 +63,4 @@ function PrecioFinal ()
 	IVA=resultado*1.21;
 
 	alert("el precio final es de " + IVA);
-
-
-
-	
 }

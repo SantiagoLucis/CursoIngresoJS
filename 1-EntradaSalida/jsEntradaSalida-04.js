@@ -8,7 +8,5 @@ function mostrar()
 	nombre = prompt("Ingresa tu nombre", "Santiago");
 	txtIdNombre.value=nombre;
 	//document.getElementById('txtIdNombre').value=nombre;
-
-	
 }
 

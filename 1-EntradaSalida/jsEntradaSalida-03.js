@@ -9,8 +9,6 @@ function mostrar()
 	nombreIngresado=txtIdNombre.value ;
 	//nombreIngresado=document.getElementById('txtIdNombre').value;
 	alert("su nombre es: " + nombreIngresado);
-
-
 }
 
 

@@ -23,31 +23,23 @@ function Rectangulo ()
 	area= largo*ancho;
 	resultado= area*3;
 
-
 	alert("la cantidad necesaria es de " + resultado +" alambres");
-
-
 }
 function Circulo () 
 {
-
-
 	var radio;
 	var resultado;
+	var area;
 
 	var radio=txtIdRadio.value;
-
 	var radio=parseInt(radio);
-
-	resultado=radio*2*3;
+	area= (2 * radio) * Math.PI ;
+	resultado=area*3;
 
 	alert("la cantidad necesaria es de "+resultado+" alambres");
-
-	
 }
 function Materiales () 
 {
-
 	var largo;
 	var ancho;
 	var resultado;
@@ -68,7 +60,4 @@ function Materiales ()
 	cal=contrapiso*3;
 
 	alert("la cantidad necesaria es de "+cemento+" bolsas de cemento y "+cal+" bolsas de cal");
-
-
-	
 }

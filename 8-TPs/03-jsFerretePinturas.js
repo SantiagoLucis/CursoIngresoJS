@@ -16,11 +16,7 @@ function FahrenheitCentigrados ()
 
 	resultadoFC=(centígrados-32)/1.8;
 
-
 	alert(+fahrenheit+ " Fahrenheit son " +resultadoFC+ " Centígrados");
-
-
-	
 }
 
 function CentigradosFahrenheit () 
@@ -38,6 +34,4 @@ function CentigradosFahrenheit ()
 	resultadoCF=fahrenheit*1.8+32;
 
 	alert(+centígrados+ " Centígrados son " +resultadoCF+ " Fahrenheit");
-	
-
 }
