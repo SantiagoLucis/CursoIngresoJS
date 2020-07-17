@@ -1,7 +1,14 @@
 function mostrar()
 {
 	//tomo la edad  
-	alert("ok");
+	var edad;
+	edad=txtIdEdad.value;
 
+	if (edad >= 13) { if(edad <= 17){ 
+		alert("sos adolescente");
+	}}
 
+	alert("tenes " +edad+ " años");
+
+//no resuelto.
 }//FIN DE LA FUNCIÓN
