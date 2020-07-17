@@ -10,7 +10,7 @@ function Rectangulo ()
 	var ancho;
 	var radio;
 	var resultado;
-	var area;
+	var areaRectangulo;
 
 	var largo=txtIdLargo.value;
 	var ancho=txtIdAncho.value;
@@ -20,8 +20,8 @@ function Rectangulo ()
 	var ancho=parseInt(ancho);
 	var radio=parseInt(radio);
 
-	area= largo*ancho;
-	resultado= area*3;
+	areaRectangulo= largo*ancho;
+	resultado= areaRectangulo*3;
 
 	alert("la cantidad necesaria es de " + resultado +" alambres");
 }
@@ -29,12 +29,12 @@ function Circulo ()
 {
 	var radio;
 	var resultado;
-	var area;
+	var areaCirculo;
 
 	var radio=txtIdRadio.value;
 	var radio=parseInt(radio);
-	area= (2 * radio) * Math.PI ;
-	resultado=area*3;
+	areaCirculo= (2 * radio) * Math.PI ;
+	resultado=areaCirculo*3;
 
 	alert("la cantidad necesaria es de "+resultado+" alambres");
 }
@@ -42,7 +42,6 @@ function Materiales ()
 {
 	var largo;
 	var ancho;
-	var resultado;
 	var area;
 	var contrapiso;
 	var cemento;
