@@ -21,7 +21,7 @@ function sumar()
 
 	alert(resultado);
 
-
+}
 	
 
 function restar()
@@ -36,7 +36,7 @@ function restar()
 
 	alert(resultado);
 
-
+}
 
 function multiplicar()
 { 
@@ -64,6 +64,7 @@ function dividir()
 	resultado= numero1 / numero2;
 
 	alert(resultado);
+
 	}
 
 
