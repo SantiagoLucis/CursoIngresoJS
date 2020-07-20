@@ -8,7 +8,4 @@ function mostrar()
 	{
 		alert(" sos mayor ");
 	}
-
-	alert(" tenes " +edad+ " años");
-
 }//FIN DE LA FUNCIÓN

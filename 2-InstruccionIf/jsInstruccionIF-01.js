@@ -17,5 +17,4 @@ function mostrar()
 	{
 		alert("Niña bonita");
 	}
-	alert(edad);
 }//FIN DE LA FUNCIÓN
