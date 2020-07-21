@@ -10,5 +10,43 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	var cantidadLamparas;
+ 	var precioUnitario;
+ 	var marcaLamparas;
+ 	precioUnitario=35;
+
+ 	cantidadLamparas=txtIdCantidad.value;
+ 	marcaLamparas=Marca.value;
+
+ 	cantidadLamparas=parseInt(cantidadLamparas);
+ 	precioTotal=precioUnitario*cantidadLamparas;
+
+
+ 	if (cantidadLamparas>5)
+ {
+ 		txtIdprecioDescuento.value=precioTotal * 50/100;
+ }
+ 	else 
+ {
+ 		if (cantidadLamparas > 5 || marcaLamparas == "ArgentinaLuz" )
+ {
+ 		txtIdprecioDescuento.value=precioTotal * 40/100;
+ }
+ else
+ {
+ 	if (cantidadLamparas > 5 || marcaLamparas != "ArgentinaLuz")
+ {
+ 		txtIdprecioDescuento.value=precioTotal *30/100;
+ }
+ 	else
+ {
+ 	if (cantidadLamparas == 4 && marcaLamparas == "ArgentinaLuz" || "FelipeLamparas")
+ 	{
+ 		txtIdprecioDescuento.value=precioTotal *25/100;
+ 		//me hace siempre el descuento y no se como arreglarlo.. punto C me da mal.
+ 	}
+
+ }
+}
+}
 }
