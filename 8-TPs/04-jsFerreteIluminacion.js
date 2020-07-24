@@ -9,11 +9,12 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{
+/*{
  	var cantidadLamparas;
  	var precioUnitario;
  	var marcaLamparas;
  	precioUnitario=35;
+ 	var precioConDescuento;
 
  	cantidadLamparas=txtIdCantidad.value;
  	marcaLamparas=Marca.value;
@@ -21,32 +22,123 @@ function CalcularPrecio ()
  	cantidadLamparas=parseInt(cantidadLamparas);
  	precioTotal=precioUnitario*cantidadLamparas;
 
-
  	if (cantidadLamparas>5)
- {
+ 	{
  		txtIdprecioDescuento.value=precioTotal * 50/100;
- }
+ 	}
  	else 
- {
- 		if (cantidadLamparas > 5 || marcaLamparas == "ArgentinaLuz" )
- {
- 		txtIdprecioDescuento.value=precioTotal * 40/100;
- }
- else
- {
- 	if (cantidadLamparas > 5 || marcaLamparas != "ArgentinaLuz")
- {
- 		txtIdprecioDescuento.value=precioTotal *30/100;
- }
+ 	{
+ 		if (cantidadLamparas == 5 && marcaLamparas == "ArgentinaLuz" )
+ 	{
+ 		precioConDescuento=precioTotal * 40/100;
+ 		txtIdprecioDescuento.value=precioTotal - precioConDescuento;
+ 	}
  	else
- {
+ 	{
+ 	if (cantidadLamparas == 5 && marcaLamparas != "ArgentinaLuz")
+ 	{
+ 		precioConDescuento=precioTotal *30/100;
+ 		txtIdprecioDescuento.value=precioTotal- precioConDescuento;
+ 	}
+ 	else
+ 	{
  	if (cantidadLamparas == 4 && marcaLamparas == "ArgentinaLuz" || "FelipeLamparas")
  	{
- 		txtIdprecioDescuento.value=precioTotal *25/100;
- 		//me hace siempre el descuento y no se como arreglarlo.. punto C me da mal.
+ 		precioConDescuento=precioTotal *25/100;
+ 		txtIdprecioDescuento.value= precioTotal- precioConDescuento;
+ 		//me hace siempre el descuento y no se como arreglarlo
  	}
+ 	else
+ 	{
+ 	if (cantidadLamparas == 4 && marcaLamparas != "ArgentinaLuz" || "FelipeLamparas")
+	{
+ 		precioConDescuento=precioTotal *20/100;
+ 		txtIdprecioDescuento.value= precioTotal- precioConDescuento;
+	}//FUNCIONA MAL
+	}
 
- }
-}
-}
-}
+	}
+	}
+	}
+	}*/
+	{
+		var cantidadLamparas;
+ 		var precioUnitario;
+ 		var marcaLamparas;
+ 		var precioConDescuento;
+ 		precioUnitario=35;
+
+ 		cantidadLamparas=txtIdCantidad.value;
+ 		marcaLamparas=Marca.value;
+		cantidadLamparas=parseInt(cantidadLamparas);
+ 		precioTotal=precioUnitario*cantidadLamparas;
+ 		txtIdprecioDescuento.value=precioTotal;
+
+ 		if (cantidadLamparas>5)
+ 		{
+ 			txtIdprecioDescuento.value=precioTotal * 50/100;
+ 		}
+ 			else 
+ 			{
+ 			if (cantidadLamparas == 5)
+ 			{
+ 				
+ 				if (marcaLamparas == "ArgentinaLuz")
+ 				{
+ 					precioConDescuento=precioTotal * 40/100;
+ 					txtIdprecioDescuento.value=precioTotal - precioConDescuento;
+ 				}
+ 				else
+ 				{
+ 					if (marcaLamparas != "ArgentinaLuz")
+ 					{
+ 						precioConDescuento=precioTotal *30/100;
+ 						txtIdprecioDescuento.value=precioTotal- precioConDescuento;
+					}
+ 				}
+			}
+						if (cantidadLamparas == 4) 
+						{
+							if (marcaLamparas == "ArgentinaLuz" && "FelipeLamparas") 
+							{
+								precioConDescuento=precioTotal *25/100;
+ 								txtIdprecioDescuento.value= precioTotal- precioConDescuento;
+							}
+							else 
+							{
+								if (marcaLamparas != "ArgentinaLuz" && "FelipeLamparas")
+								{
+									precioConDescuento = precioTotal *20/100;
+ 									txtIdprecioDescuento.value = precioTotal- precioConDescuento;
+								}
+							}
+						}
+							if (cantidadLamparas == 3) 
+							{
+								if (marcaLamparas == "ArgentinaLuz") 
+								{
+									precioConDescuento = precioTotal *15/100;
+									txtIdprecioDescuento.value = precioTotal- precioConDescuento;
+								}
+								else
+								{
+									if (marcaLamparas == "FelipeLamparas") 
+									{
+										precioConDescuento = precioTotal *10/100;
+										txtIdprecioDescuento.value = precioTotal- precioConDescuento;
+									} // me da el resultado de abajo, el resto esta bien
+
+									if (marcaLamparas != "ArgentinaLuz" && "FelipeLamparas") 
+									{
+										precioConDescuento = precioTotal *5/100;
+										txtIdprecioDescuento.value = precioTotal - precioConDescuento;
+									}
+
+								}					
+																				
+							}
+
+
+			}
+	}
+
