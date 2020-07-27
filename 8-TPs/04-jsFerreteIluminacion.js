@@ -62,6 +62,9 @@ function CalcularPrecio ()
 	}
 	}*/
 	{
+		var ingresosbrutos;
+		var precioFinal;
+		var IIBB;
 		var cantidadLamparas;
  		var precioUnitario;
  		var marcaLamparas;
@@ -86,31 +89,32 @@ function CalcularPrecio ()
  				if (marcaLamparas == "ArgentinaLuz")
  				{
  					precioConDescuento=precioTotal * 40/100;
- 					txtIdprecioDescuento.value=precioTotal - precioConDescuento;
+ 					precioFinal=precioTotal - precioConDescuento;
+ 					txtIdprecioDescuento.value=precioFinal;
  				}
  				else
  				{
  					if (marcaLamparas != "ArgentinaLuz")
  					{
  						precioConDescuento=precioTotal *30/100;
- 						txtIdprecioDescuento.value=precioTotal- precioConDescuento;
+ 						precioFinal=precioTotal- precioConDescuento;
+ 						txtIdprecioDescuento.value=precioFinal;
 					}
  				}
 			}
 						if (cantidadLamparas == 4) 
 						{
-							if (marcaLamparas == "ArgentinaLuz" && "FelipeLamparas") 
+							if (marcaLamparas == "ArgentinaLuz" || marcaLamparas == "FelipeLamparas") 
 							{
 								precioConDescuento=precioTotal *25/100;
- 								txtIdprecioDescuento.value= precioTotal- precioConDescuento;
+								precioFinal=precioTotal- precioConDescuento;
+ 								txtIdprecioDescuento.value= precioFinal;
 							}
 							else 
-							{
-								if (marcaLamparas != "ArgentinaLuz" && "FelipeLamparas")
-								{
+							{																
 									precioConDescuento = precioTotal *20/100;
- 									txtIdprecioDescuento.value = precioTotal- precioConDescuento;
-								}
+									precioFinal=precioTotal- precioConDescuento;
+ 									txtIdprecioDescuento.value = precioFinal;						
 							}
 						}
 							if (cantidadLamparas == 3) 
@@ -118,27 +122,32 @@ function CalcularPrecio ()
 								if (marcaLamparas == "ArgentinaLuz") 
 								{
 									precioConDescuento = precioTotal *15/100;
-									txtIdprecioDescuento.value = precioTotal- precioConDescuento;
+									precioFinal=precioTotal- precioConDescuento;
+									txtIdprecioDescuento.value = precioFinal;
 								}
 								else
 								{
 									if (marcaLamparas == "FelipeLamparas") 
 									{
 										precioConDescuento = precioTotal *10/100;
-										txtIdprecioDescuento.value = precioTotal- precioConDescuento;
-									} // me da el resultado de abajo, el resto esta bien
+										precioFinal=precioTotal- precioConDescuento;
+										txtIdprecioDescuento.value = precioFinal;
+									} 
 
-									if (marcaLamparas != "ArgentinaLuz" && "FelipeLamparas") 
+									else  
 									{
-										precioConDescuento = precioTotal *5/100;
-										txtIdprecioDescuento.value = precioTotal - precioConDescuento;
+										precioConDescuento=precioTotal*5/100;
+										precioFinal=precioTotal- precioConDescuento;
+										txtIdprecioDescuento.value=precioFinal;
 									}
-
-								}					
-																				
+								}																		
 							}
-
-
+			}
+			if (precioFinal > 120) 
+			{
+				ingresosbrutos = precioFinal * 0.1;
+				IIBB = precioFinal+ingresosbrutos;
+				alert ("Usted pago " + IIBB + " agregando el IIBB");		
 			}
 	}
 
