@@ -27,9 +27,7 @@ function mostrar()
 				alert("Su precio final es de "+descuento20porciento);
 				break;
 		}
-	}
-		switch(estacionIngresada)
-		{ 
+		break;		 
 			case "Verano":
 
 			switch(destinoIngresado)
@@ -45,14 +43,12 @@ function mostrar()
 					alert("Su precio final es de "+aumento20porciento);
 					break;
 			}
-		}
-			switch(estacionIngresada)
-			{
+			break;
 				case "Otoño":
 				case "Primavera":
 
-				switch (destinoIngresado)
-				{
+				switch(destinoIngresado)
+				{									
 					case "Bariloche":
 					case "Cataratas":
 					case "Mar del plata":
@@ -62,5 +58,6 @@ function mostrar()
 						alert("Su precio final es de "+ tarifaDeViajes);
 						break;
 				}
-			}
+			break;
+	}			
 }//FIN DE LA FUNCIÓN
