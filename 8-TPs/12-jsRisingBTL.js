@@ -14,6 +14,7 @@ function ComenzarIngreso ()
  	var sexoIngresado;
  	var estadoCivilIngresado;
 
+ 	
 
 
 }
